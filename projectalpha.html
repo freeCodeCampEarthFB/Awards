@@ -1,40 +1,171 @@
 <html>
+
 <head>
-<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
-<style media="screen" type="text/css">
-h1{font-family: 'Nova Mono', monospace;
-font-size: 50px;
-text-align: center;}
-body{background-color: green;
+    
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono"|<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <style media="screen" type="text/css">
+   
+  #Fbanner1 {
+      position: absolute;
+      top: 0;
+      right: 0%
+      
+    
+
+  }    
+  #Fbanner2 {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      
+
+  }    
+    #banner { 
+       position: absolute; 
+       top: 0%;
+       left:0%;
+    
 }
-section {display: flex;
-flex-direction: row;}
-#main{font-family: 'Nova Mono', monospace;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-around;
-text-align: center;}
-</style>
-<title>Free Code Camp Sunday Meme Award</title>
-</head>
 
-<body>
-<div id="main">
-<h1> Free Code Camp Sunday Funnies Meme Award </h1>
-<section >
-<h2> 1st place <figure> <img src=".\images\meme1.jpg" width=200 height=200> <h2><figcaption> Alert: dank meme found! </figcaption> </figure></h2>
 
-<h2> 2nd place <figure> <img src=".\images\meme1.jpg" width=200 height=200> <h2><figcaption> Getting warmer.... </figcaption> </figure></h2>
 
-<h2> 3rd place <figure><img src=".\images\meme1.jpg" width=200 height=200> <h2><figcaption> A small ripple effect...</figcaption> </figure></h2>
-</section>
-<footer>
-<h2> Honorable Mention
-<section><figure><img src=".\images\meme1.jpg" width=200 height=200> <h2><figcaption> Worth an eyebrow raise...</figcaption> </figure></section></h2>
-<h2> Hononorable Mention
-<section><figure><img src=".\images\meme1.jpg" width=200 height=200> <h2><figcaption> Worth an eyebrow raise...</figcaption> </figure></section></h2>
-</footer>
+        #hook {
+            font-family: 'VT323', monospace;
+            font-size: 30px;
+            text-align: center;
+            font-variant: small-caps;
+            border-style: double solid;
+            border-color:black;
+            background-color:blue;
+            transform: translateX(425px);
+        
+        }
+        h1 {
+            font-family: 'Nova Mono', monospace;
+            font-size: 50px;
+            text-align: center;
+            transform: translateX(-5px);
+        }
+
+        body {
+            background-color: green;
+            
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #main {
+            font-family: 'Nova Mono', monospace;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            position: absolute;
+            top: 8px;
+            transform:translateY(45px);
+        }
+
+    </style>
+
+<div id="banner">
+    <div id="banner-content">
+        <title>Free Code Camp Sunday Meme Award</title>
+<div id="instruct"><h4 id="Hook" >!click to choose the meme of legend!</h4></div></div>
+    </div>
 </div>
-<footer font size="1"> This site was made by Jacques Kriel in collaboration with the free code camp adminstrative team <footer>
-</body>
+</head>
+<div id="Fbanner2"><p> <img height="100" width="100" src=".\images\fccLogo.png" alt=""></p>     </div>
+<div id="Fbanner1"><p> <img height="100" width="100" src=".\images\fccLogo.png" alt=""></p>     </div>
+<div id="main-content">
+<body>
+        
+    <div id="main">
+        <div id="titleF"><h1> Sunday Funnies Meme Award </h1></div>
+        <section>
+                    
+            <h2> 1st place
+                <figure>
+                    <img src=".\images\meme1.jpg" onclick="incrementThumb('1st')" width=200 height=200>
+                    <p id="1st">0</p>
+                    <h2>
+                        <figcaption> Alert: dank meme found! </figcaption>
+                </figure>
+                </h2>
+                
+                <h2> 2nd place
+                    <figure>
+                        <img src=".\images\meme1.jpg" onclick="incrementThumb('2nd')" width=200 height=200>
+                        <p id="2nd">0</p>
+                        <h2>
+                            <figcaption> Getting warmer.... </figcaption>
+                    </figure>
+                    </h2>
+
+                    <h2> 3rd place
+                        <figure>
+                            <img src=".\images\meme1.jpg" onclick="incrementThumb('3rd')" width=200 height=200>
+                            <p id="3rd">0</p>
+                            <h2>
+                                <figcaption> A small ripple effect...</figcaption>
+                        </figure>
+                        </h2>
+
+                    </section>
+                
+                    <footer>                
+            <h2> Honorable Mention
+                <section>
+                    <figure>
+                        <img src=".\images\meme1.jpg" onclick="incrementThumb('HM1')" width=200 height=200>
+                        <p id="HM1">0</p>
+                        <h2>
+                            <figcaption> Worth an eyebrow raise...</figcaption>
+                    </figure>
+                </section>
+                </h2>
+                <h2> Hononorable Mention
+                    <section>
+                        <figure>
+                            <img src=".\images\meme1.jpg" onclick="incrementThumb('HM2')" width=200 height=200>
+                            <p id="HM2">0</p>
+                            <h2>
+                                <figcaption> Worth an eyebrow raise...</figcaption>
+                        </figure>
+                    </section>
+                    </h2>
+        </footer>
+    </div>
+    
+
+            <script type="text/javascript">
+                function incrementThumb(value){
+                   var currentValue = document.getElementById(value).innerHTML; 
+                   //console.log("typeof" + typeof(currentValue)); 
+                    //console.log("1" + currentValue);
+                   if (currentValue === undefined || currentValue === "NaN" || currentValue === '') {
+                       currentValue = 0;
+                       //console.log("0" + currentValue);
+
+                   }
+                   //console.log("2" + currentValue);
+
+                   var newValue = parseInt(currentValue) + 1;
+                //console.log("3" + newValue);
+
+                   document.getElementById(value).innerHTML= newValue;
+                   localStorage.setItem(newValue);} 
+
+                function DataSaver ()
+
+                   
+               </script>
+
+
+</body> </div></div>
+      
+  
+</html>
